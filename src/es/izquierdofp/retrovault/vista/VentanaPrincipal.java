@@ -28,6 +28,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        popupTabla = new javax.swing.JPopupMenu();
+        popAnyadir = new javax.swing.JMenuItem();
+        popEditar = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        popEliminar = new javax.swing.JMenuItem();
         panelFiltros = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -50,6 +55,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         mniEditar = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         mniEliminar = new javax.swing.JMenuItem();
+        mnVista = new javax.swing.JMenu();
+        mniActualizar = new javax.swing.JMenuItem();
+
+        popAnyadir.setText("Añadir juego…");
+        popupTabla.add(popAnyadir);
+
+        popEditar.setText("Editar juego…");
+        popupTabla.add(popEditar);
+        popupTabla.add(jSeparator2);
+
+        popEliminar.setText("Eliminar juego");
+        popupTabla.add(popEliminar);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("RetroVault");
@@ -145,6 +162,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(mnJuegos);
 
+        mnVista.setText("Vista");
+
+        mniActualizar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, 0));
+        mniActualizar.setText("Actualizar");
+        mnVista.add(mniActualizar);
+
+        jMenuBar1.add(mnVista);
+
         setJMenuBar(jMenuBar1);
 
         pack();
@@ -200,16 +225,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JLabel lblCompletados;
     private javax.swing.JLabel lblMedia;
     private javax.swing.JLabel lblTotal;
     private javax.swing.JMenu mnJuegos;
+    private javax.swing.JMenu mnVista;
+    private javax.swing.JMenuItem mniActualizar;
     private javax.swing.JMenuItem mniAnyadir;
     private javax.swing.JMenuItem mniEditar;
     private javax.swing.JMenuItem mniEliminar;
     private javax.swing.JMenuItem mniSalir;
     private javax.swing.JPanel panelEstadisticas;
     private javax.swing.JPanel panelFiltros;
+    private javax.swing.JMenuItem popAnyadir;
+    private javax.swing.JMenuItem popEditar;
+    private javax.swing.JMenuItem popEliminar;
+    private javax.swing.JPopupMenu popupTabla;
     private javax.swing.JTable tablaJuegos;
     // End of variables declaration//GEN-END:variables
 }
