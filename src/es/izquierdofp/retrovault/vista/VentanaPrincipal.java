@@ -46,6 +46,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         mniSalir = new javax.swing.JMenuItem();
         mnJuegos = new javax.swing.JMenu();
+        mniAnyadir = new javax.swing.JMenuItem();
+        mniEditar = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        mniEliminar = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("RetroVault");
@@ -125,6 +129,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         mnJuegos.setText("Juegos");
         mnJuegos.setToolTipText("");
+
+        mniAnyadir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        mniAnyadir.setText("Añadir juego…");
+        mnJuegos.add(mniAnyadir);
+
+        mniEditar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        mniEditar.setText("Editar juego…");
+        mnJuegos.add(mniEditar);
+        mnJuegos.add(jSeparator1);
+
+        mniEliminar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_DELETE, 0));
+        mniEliminar.setText("Eliminar juego");
+        mnJuegos.add(mniEliminar);
+
         jMenuBar1.add(mnJuegos);
 
         setJMenuBar(jMenuBar1);
@@ -181,10 +199,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JLabel lblCompletados;
     private javax.swing.JLabel lblMedia;
     private javax.swing.JLabel lblTotal;
     private javax.swing.JMenu mnJuegos;
+    private javax.swing.JMenuItem mniAnyadir;
+    private javax.swing.JMenuItem mniEditar;
+    private javax.swing.JMenuItem mniEliminar;
     private javax.swing.JMenuItem mniSalir;
     private javax.swing.JPanel panelEstadisticas;
     private javax.swing.JPanel panelFiltros;
