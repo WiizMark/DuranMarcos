@@ -36,11 +36,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnFiltrar = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
         btnAnyadir = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tablaJuegos = new javax.swing.JTable();
+        panelEstadisticas = new javax.swing.JPanel();
+        lblTotal = new javax.swing.JLabel();
+        lblCompletados = new javax.swing.JLabel();
+        lblMedia = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        mniSalir = new javax.swing.JMenuItem();
+        mnJuegos = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("RetroVault");
         setMinimumSize(new java.awt.Dimension(900, 600));
 
+        panelFiltros.setAlignmentX(1.0F);
+        panelFiltros.setAlignmentY(2.0F);
         panelFiltros.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         jLabel1.setText("Consola:");
@@ -67,7 +79,55 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnAnyadir.addActionListener(this::btnAnyadirActionPerformed);
         panelFiltros.add(btnAnyadir);
 
-        getContentPane().add(panelFiltros, java.awt.BorderLayout.CENTER);
+        getContentPane().add(panelFiltros, java.awt.BorderLayout.PAGE_START);
+
+        tablaJuegos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tablaJuegos.setAlignmentX(1.0F);
+        tablaJuegos.setAlignmentY(1.0F);
+        tablaJuegos.setFocusable(false);
+        tablaJuegos.setGridColor(new java.awt.Color(60, 60, 60));
+        tablaJuegos.setRowHeight(26);
+        tablaJuegos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jScrollPane2.setViewportView(tablaJuegos);
+
+        getContentPane().add(jScrollPane2, java.awt.BorderLayout.CENTER);
+
+        panelEstadisticas.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        lblTotal.setText("Total: 0");
+        panelEstadisticas.add(lblTotal);
+
+        lblCompletados.setText("| Completados: 0");
+        panelEstadisticas.add(lblCompletados);
+
+        lblMedia.setText("| Puntuación media: –");
+        panelEstadisticas.add(lblMedia);
+
+        getContentPane().add(panelEstadisticas, java.awt.BorderLayout.PAGE_END);
+
+        jMenu1.setText("Archivo");
+
+        mniSalir.setText("Salir");
+        mniSalir.addActionListener(this::mniSalirActionPerformed);
+        jMenu1.add(mniSalir);
+
+        jMenuBar1.add(jMenu1);
+
+        mnJuegos.setText("Juegos");
+        mnJuegos.setToolTipText("");
+        jMenuBar1.add(mnJuegos);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,6 +139,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void btnAnyadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnyadirActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAnyadirActionPerformed
+
+    private void mniSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniSalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mniSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -113,6 +177,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JLabel lblCompletados;
+    private javax.swing.JLabel lblMedia;
+    private javax.swing.JLabel lblTotal;
+    private javax.swing.JMenu mnJuegos;
+    private javax.swing.JMenuItem mniSalir;
+    private javax.swing.JPanel panelEstadisticas;
     private javax.swing.JPanel panelFiltros;
+    private javax.swing.JTable tablaJuegos;
     // End of variables declaration//GEN-END:variables
 }
